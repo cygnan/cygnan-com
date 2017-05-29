@@ -37,7 +37,16 @@ $(document).ready(function () {
 
     let t = 0;
 
+
     setInterval(function () {
+        if (t <= 0.2) {
+            E.map(
+                e => $('#' + e).css(
+                    { opacity: 1 }
+                )
+            )
+        }
+
         E.map(function (e) {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
