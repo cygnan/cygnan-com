@@ -40,11 +40,12 @@ $(document).ready(function () {
     // 2フレーム目でopacityを1にする    
     const OPENING = setInterval(function () {
         if (t == INTERVAL / 1000) {
-            E.map(
-                e => $('#' + e).css(
+            E.map(function (e) {
+                let idname = '#' + e; /* For IE11 */
+                $(idname).css(
                     { opacity: 1 }
                 )
-            )
+            })
             clearInterval(OPENING);
         }
     }, INTERVAL);
@@ -55,8 +56,8 @@ $(document).ready(function () {
         E.map(function (e) {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
-
-            $('#' + e).css(
+            let idname = '#' + e; /* For IE11 */
+            $(idname).css(
                 {
                     left: x + "vmin",
                     top: y + "vmin"
