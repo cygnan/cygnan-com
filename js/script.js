@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     let t = 0;
 
-    // 2フレーム目でopacityを0にする    
+    // 2フレーム目でopacityを1にする    
     const OPENING = setInterval(function () {
         if (t == INTERVAL / 1000) {
             E.map(
