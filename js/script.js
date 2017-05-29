@@ -20,7 +20,7 @@ $(document).ready(function () {
     ];
 
     // 角速度 [rad/s]
-    const W = 2 * Math.PI * (2 / 180);
+    const W = 2 * Math.PI * (4 / 360);
 
     const CENTER_X = 30 / 2 - 18 / 2;
     const CENTER_Y = 30 / 2 - 18 / 2;
@@ -49,7 +49,7 @@ $(document).ready(function () {
         }
     }, INTERVAL);
 
-    (function () { OPENING })();
+    OPENING;
 
     setInterval(function () {
         E.map(function (e) {
