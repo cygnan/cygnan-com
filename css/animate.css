@@ -1287,7 +1287,7 @@
 @keyframes zoomIn {
   0% {
     opacity: 0.5;
-    transform: scale3d(.8, .8, .8);
+    transform: scale3d(.0, .0, .0);
   }
 
   100% {

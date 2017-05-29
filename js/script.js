@@ -37,16 +37,21 @@ $(document).ready(function () {
 
     let t = 0;
 
-
-    setInterval(function () {
-        if (t <= 0.2) {
+    // 2フレーム目でopacityを0にする    
+    const OPENING = setInterval(function () {
+        if (t == INTERVAL / 1000) {
             E.map(
                 e => $('#' + e).css(
                     { opacity: 1 }
                 )
             )
+            clearInterval(OPENING);
         }
+    }, INTERVAL);
 
+    (function () { OPENING })();
+
+    setInterval(function () {
         E.map(function (e) {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
