@@ -65,8 +65,8 @@ $(document).ready(function () {
             )
         })
 
-        // 次また、INTERVAL / 1000[s]（ INTERVAL[ms] ）後に実行されるので
-        // INTERVAL[s]だけ t[s] に足しておく。
+        // 次また、(INTERVAL / 1000)[s]（ INTERVAL[ms] ）後に実行されるので
+        // (INTERVAL / 1000)[s]だけ t[s] に足しておく。
         t += INTERVAL / 1000;
     }, INTERVAL)
 });
