@@ -34,6 +34,7 @@ html, body, #flex {
     -moz-animation: zoomIn 0.3s;
     animation: zoomIn 0.3s;
     position: relative;
+    z-index: 2;
 }
 
 .btn-icons-a {
@@ -59,32 +60,32 @@ html, body, #flex {
 
 #posgithub {
     position: absolute;
-    left: 36vmin; /* 30+6 */
-    top: 6vmin; /* -0+6 */
-}
-
-#postwitter {
-    position: absolute;
-    left: 15.27vmin; /* 30*cos(2*pi/5)+6 */
-    top: -22.53vmin; /* -30*sin(2*pi/5)+6 */
-}
-
-#poskeybase {
-    position: absolute;
     left: -18.27vmin; /* 30*cos(2*2*pi/5)+6 */
     top: -11.63vmin; /* -30*sin(2*2*pi/5)+6 */
 }
 
-#possoundcloud {
+#postwitter {
     position: absolute;
     left: -18.27vmin; /* 30*cos(3*2*pi/5)+6 */
     top: 23.63vmin; /* -30*sin(3*2*pi/5)+6 */
 }
 
-#posemail {
+#poskeybase {
     position: absolute;
     left: 15.27vmin; /* 30*cos(4*2*pi/5)+6 */
     top: 34.53vmin; /* -30*sin(4*2*pi/5)+6 */
+}
+
+#possoundcloud {
+    position: absolute;
+    left: 36vmin; /* 30+6 */
+    top: 6vmin; /* -0+6 */
+}
+
+#posemail {
+    position: absolute;
+    left: 15.27vmin; /* 30*cos(2*pi/5)+6 */
+    top: -22.53vmin; /* -30*sin(2*pi/5)+6 */
 }
 
 #email-icon-in-popup {
