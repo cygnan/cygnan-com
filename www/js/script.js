@@ -1,5 +1,5 @@
 (function () {
-    if ((window.location.href.toString().indexOf('cygnan-com.appspot.com')) != '-1') {
+    if (window.location.href.toString().indexOf('cygnan-com.appspot.com') != '-1') {
         window.location.href = 'http://cygnan.com';
     }
 })();
