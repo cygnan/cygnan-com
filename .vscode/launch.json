@@ -1,0 +1,21 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:9080",
+            "webRoot": "${workspaceRoot}/wwwroot",
+            "runtimeExecutable": "C:\\PortablePrograms\\chrome-win32\\chrome.exe"
+        },
+        {
+            "name": "Launch index.html (disable sourcemaps)",
+            "type": "chrome",
+            "request": "launch",
+            "sourceMaps": false,
+            "file": "http://localhost:9080",
+            "runtimeExecutable": "C:\\PortablePrograms\\chrome-win32\\chrome.exe"
+        }
+    ]
+}

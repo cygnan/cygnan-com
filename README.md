@@ -1,4 +1,4 @@
-# cygnan.github.io
+# cygnan-com
 My personal website: [cygnan.com](http://cygnan.com)
 
 ## License
