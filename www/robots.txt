@@ -1,0 +1,29 @@
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: Megalodon
+Disallow: /
+
+User-agent: BaiduImagespider
+Disallow: /
+
+User-agent: msnbot-media
+Disallow: /
+
+User-agent: ichiro
+Disallow: /
+
+User-agent: Googlebot-Image
+Disallow: /
+
+User-agent: Yetibot
+Disallow: /
+
+User-agent: psbot
+Disallow: /
+
+User-agent: Yahoo-MMCrawler
+Disallow: /
+
+User-agent: *
+Disallow: /img
