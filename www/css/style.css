@@ -30,7 +30,6 @@ html, body, #flex {
     -webkit-animation: zoomIn 0.6s;
     -moz-animation: zoomIn 0.6s;
     animation: zoomIn 0.6s;
-    position: relative;
     z-index: 2;
 }
 
