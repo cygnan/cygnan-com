@@ -11,13 +11,13 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     // 描画速度 [frame/s]
-    const FPS = 5;
+    var FPS = 5;
 
     // FPS（描画速度）から計算されるインターバル（周期） [ms]
-    const INTERVAL = 1000 / FPS;
+    var INTERVAL = 1000 / FPS;
 
     // map関数用の配列
-    const E = [
+    var E = [
         "posgithub",
         "postwitter",
         "poskeybase",
@@ -26,14 +26,14 @@ $(document).ready(function () {
     ];
 
     // 角速度 [rad/s]
-    const W = Math.floor(2 * Math.PI * (4 / 360) * 1000) / 1000;
+    var W = Math.floor(2 * Math.PI * (4 / 360) * 1000) / 1000;
 
-    const CENTER_X = 30 / 2 - 18 / 2;
-    const CENTER_Y = 30 / 2 - 18 / 2;
-    const RADIUS = 30;
+    var CENTER_X = 15 / 2 - 9 / 2;
+    var CENTER_Y = 15 / 2 - 9 / 2;
+    var RADIUS = 15;
 
     // 初期位相 [rad]
-    const PH = {
+    var PH = {
         "posgithub": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 0,
         "postwitter": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 1,
         "poskeybase": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 2,
@@ -41,17 +41,20 @@ $(document).ready(function () {
         "posemail": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
     }
 
-    let t = 0;
+    var t = 0;
 
-    // 2フレーム目でopacityを1にする    
-    const OPENING = setInterval(function () {
+    // 2フレーム目でopacityを1にする
+    var OPENING = setInterval(function () {
         if (t == INTERVAL / 1000) {
             E.map(function (e) {
-                let idname = '#' + e; /* For IE11 */
+                var idname = '#' + e; /* For IE11 */
                 $(idname).css(
                     { opacity: 1 }
                 )
             })
+            $("#listbox").animate(
+                { opacity: 1 }
+            )
             clearInterval(OPENING);
         }
     }, INTERVAL);
@@ -60,13 +63,13 @@ $(document).ready(function () {
 
     setInterval(function () {
         E.map(function (e) {
-            let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
-            let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
-            let idname = '#' + e; /* For IE11 */
+            var x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
+            var y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
+            var idname = '#' + e; /* For IE11 */
             $(idname).css(
                 {
-                    left: x + "vmin",
-                    top: y + "vmin"
+                    left: x + "rem",
+                    top: y + "rem"
                 }
             )
         })

@@ -1,31 +1,144 @@
 @charset "UTF-8";
 
+/*
+/* Portrait-long *
+@media screen and (max-aspect-ratio: 2/3) {
+    html {
+        font-size: 1vw
+    }
+}
+
+/* Portrait *
+@media screen and (min-aspect-ratio: 2/3) and (max-aspect-ratio: 1/1) {
+    html {
+        font-size: 1vw
+    }
+}
+
+/* Landscape *
+@media screen and (min-aspect-ratio: 1/1) and (max-aspect-ratio: 3/2) {
+        html {
+        font-size: 1vw
+    }
+}
+*/
+
+/* Portrait-long, Portrait, and Landscape */
+@media screen and (max-aspect-ratio: 3/2) {
+    html {
+        font-size: 1vw
+    }
+}
+
+/* Landscape-long */
+@media screen and (min-aspect-ratio: 3/2) {
+    html {
+        font-size: 1.5vh
+    }
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"),
+         url("../fonts/roboto/Roboto-Bold.woff") format("woff"),
+         url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"),
+         url("../fonts/roboto/Roboto-Thin.woff") format("woff"),
+         url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
+    font-weight: 100;
+    font-style: normal;
+}
+
 html, body {
     background-color: #eeeeee;
 }
 
-html, body, #flex {
-    height: 100vh;
+html, body, #box {
+    height: 100%;
 }
 
-#flex {
+body {
     display: flex;
     -webkit-display: flex;
     justify-content: center;
+    -webkit-justify-content: center;
     align-items: center;
+    -webkit-align-items: center;
+    color: #444444;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 4rem;
 }
 
-#pos {
+b {
+    font-weight: 700;
+}
+
+#box {
+    display: flex;
+    -webkit-display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    align-items: center;
+    -webkit-align-items: center;
+    background-color: #ffffff;
+    width: 85rem;
+    height: 50rem;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.14), 0 0.25rem 1.25rem 0 rgba(0,0,0,0.12), 0 0.75rem 0.25rem -0.5rem rgba(0,0,0,0.2);
+}
+
+#iconsbox {
     position: relative;
+    width: 40rem;
+    height: 40rem;
+    border-radius: 50%;
+}
+
+#pos-topicon {
+    left: 12rem; /* 39/2-15/2 */
+    top: 12rem; /* 39/2-15/2 */
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+}
+
+#listbox {
+    width: 34rem;
+    height: 31.25rem;
+    border-top: 0.25rem solid #cccccc;
+    border-bottom: 0.25rem solid #cccccc;
+    text-align: left;
+    line-height: 6rem;
+    opacity: 0;
+}
+
+#Student {
+    margin: -1rem 0 0 8rem;
+    /* 8[rem] = 2 + 4 + 2 */
+}
+
+.listbox-icons-img {
+    margin: 0 2rem 0 2rem;
+    transform: translateY(0.4rem);
+    width: 4rem;
+    height: 4rem;
 }
 
 #topicon {
     border-radius: 50%;
     border: #ffffff solid 0.1px; /* For IE11 */
     background-color: #ffffff;
-    height: 30vmin;
-    width: 30vmin;
-    padding: 2vmin;
+    height: 15rem;
+    width: 15rem;
+    padding: 1rem;
     margin: auto;
     -webkit-animation: zoomIn 0.6s;
     -moz-animation: zoomIn 0.6s;
@@ -34,54 +147,59 @@ html, body, #flex {
 }
 
 .btn-icons-a {
-    width: 18vmin !important;
-    height: 18vmin !important;
+    width: 9rem !important;
+    height: 9rem !important;
     position: absolute;
     opacity: 0;
 }
 
 .btn-icons-img {
     position: absolute !important;
-    left: 4vmin; /* 18/2-10/2 */
-    top: 4vmin;
-    width: 10vmin;
-    height: 10vmin;
+    left: 2rem; /* 9/2-5/2 */
+    top: 2rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 #keybase-icon-img {
     position: absolute !important;
-    left: 2vmin; /* 18/2-14/2 */
-    top: 2vmin;
-    width: 14vmin;
-    height: 14vmin;
+    left: 1rem; /* 9/2-7/2 */
+    top: 1rem;
+    width: 7rem;
+    height: 7rem;
 }
 
 #posgithub {
-    left: 15.27vmin; /* 30*cos(4*2*pi/5)+6 */
-    top: 34.53vmin; /* -30*sin(4*2*pi/5)+6 */
+    left: 7.64rem; /* 15*cos(4*2*pi/5)+3 */
+    top: 17.27rem; /* -15*sin(4*2*pi/5)+3 */
 }
 
 #postwitter {
-    left: 36vmin; /* 30+6 */
-    top: 6vmin; /* -0+6 */
+    left: 18rem; /* 15+3 */
+    top: 3rem; /* -0+3 */
 }
 
 #poskeybase {
-    left: 15.27vmin; /* 30*cos(2*pi/5)+6 */
-    top: -22.53vmin; /* -30*sin(2*pi/5)+6 */
+    left: 7.63rem; /* 15*cos(2*pi/5)+3 */
+    top: -11.26rem; /* -15*sin(2*pi/5)+3 */
 }
 
 #possoundcloud {
-    left: -18.27vmin; /* 30*cos(2*2*pi/5)+6 */
-    top: -11.63vmin; /* -30*sin(2*2*pi/5)+6 */
+    left: -9.13rem; /* 15*cos(2*2*pi/5)+3 */
+    top: -5.81rem; /* -15*sin(2*2*pi/5)+3 */
 }
 
 #posemail {
-    left: -18.27vmin; /* 30*cos(3*2*pi/5)+6 */
-    top: 23.63vmin; /* -30*sin(3*2*pi/5)+6 */
+    left: -9.13rem; /* 15*cos(3*2*pi/5)+3 */
+    top: 11.81rem; /* -15*sin(3*2*pi/5)+3 */
+}
+
+#email-icon-span {
+    margin: 0 3rem 0 1rem;
 }
 
 #email-icon-in-popup {
-    height: 1.40rem;
+    height: 4rem;
     width: auto;
+    transform: translateY(0.65rem);
 }
