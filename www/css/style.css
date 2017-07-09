@@ -43,7 +43,6 @@
          url("../fonts/roboto/Roboto-Bold.woff") format("woff"),
          url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
     font-weight: 700;
-    font-style: normal;
 }
 
 @font-face {
@@ -52,7 +51,6 @@
          url("../fonts/roboto/Roboto-Thin.woff") format("woff"),
          url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
     font-weight: 100;
-    font-style: normal;
 }
 
 html, body {
