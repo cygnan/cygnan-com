@@ -86,7 +86,7 @@ b {
     align-items: center;
     -webkit-align-items: center;
     background-color: #ffffff;
-    width: 85rem;
+    width: 88rem;
     height: 50rem;
     padding: 2.5rem;
     border-radius: 0.5rem;
@@ -109,7 +109,7 @@ b {
 }
 
 #listbox {
-    width: 34rem;
+    width: 36rem;
     height: 31.25rem;
     border-top: 0.25rem solid #cccccc;
     border-bottom: 0.25rem solid #cccccc;
