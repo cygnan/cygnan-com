@@ -1,30 +1,21 @@
 @charset "UTF-8";
 
-/*
-/* Portrait-long *
+/* Portrait-long */
 @media screen and (max-aspect-ratio: 2/3) {
     html {
-        font-size: 1vw
+        font-size: 1.8vw
     }
 }
 
-/* Portrait *
-@media screen and (min-aspect-ratio: 2/3) and (max-aspect-ratio: 1/1) {
+/* Portrait */
+@media screen and (min-aspect-ratio: 2/3) and (orientation: portrait) {
     html {
-        font-size: 1vw
+        font-size: 1.2vh
     }
 }
 
-/* Landscape *
-@media screen and (min-aspect-ratio: 1/1) and (max-aspect-ratio: 3/2) {
-        html {
-        font-size: 1vw
-    }
-}
-*/
-
-/* Portrait-long, Portrait, and Landscape */
-@media screen and (max-aspect-ratio: 3/2) {
+/* Landscape */
+@media screen and (orientation: landscape) and (max-aspect-ratio: 3/2) {
     html {
         font-size: 1vw
     }
@@ -37,27 +28,73 @@
     }
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: url("../fonts/roboto/Roboto-Bold.woff2") format("woff2"),
-         url("../fonts/roboto/Roboto-Bold.woff") format("woff"),
-         url("../fonts/roboto/Roboto-Bold.ttf") format("truetype");
-    font-weight: 700;
+/* Portrait-long & Portrait (max-width: 600px) */
+@media screen and (orientation: portrait) and (max-width: 600px) {
+    body {
+        font-weight: 300;
+    }
 }
 
-@font-face {
-    font-family: "Roboto";
-    src: url("../fonts/roboto/Roboto-Thin.woff2") format("woff2"),
-         url("../fonts/roboto/Roboto-Thin.woff") format("woff"),
-         url("../fonts/roboto/Roboto-Thin.ttf") format("truetype");
-    font-weight: 100;
+/* Portrait-long & Portrait (min-width: 600px) */
+@media screen and (orientation: portrait) and (min-width: 600px) {
+    body {
+        font-weight: 100;
+    }
+}
+
+/* Portrait-long & Portrait */
+@media screen and (orientation: portrait) {
+    #box {
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        justify-content: center;
+        -webkit-justify-content: center;
+        width: 50rem;
+        height: 75rem;
+    }
+
+    #listbox {
+        height: 25rem;
+        padding: 1rem 0 0 0;
+    }
+
+    #email-popup {
+        font-size: 3rem;
+    }
+
+    #email-icon-in-popup {
+        height: 3rem;
+        transform: translateY(0.5rem);
+    }
+}
+
+/* Landscape & Landscape-long */
+@media screen and (orientation: landscape) {
+    body {
+        font-weight: 100;
+    }
+
+    #box {
+        width: 88rem;
+        height: 50rem;
+        justify-content: space-around;
+        -webkit-justify-content: space-around;
+    }
+
+    #listbox {
+        border-top: 0.25rem solid #cccccc;
+        border-bottom: 0.25rem solid #cccccc;
+        height: 31.25rem;
+        padding: 4rem 0 4rem 0;
+    }
+
+    #email-icon-in-popup {
+        height: 4rem;
+        transform: translateY(0.65rem);
+    }
 }
 
 html, body {
-    background-color: #eeeeee;
-}
-
-html, body, #box {
     height: 100%;
 }
 
@@ -68,9 +105,9 @@ body {
     -webkit-justify-content: center;
     align-items: center;
     -webkit-align-items: center;
+    background-color: #eeeeee;
     color: #444444;
     font-family: "Roboto", sans-serif;
-    font-weight: 100;
     font-size: 4rem;
 }
 
@@ -81,13 +118,9 @@ b {
 #box {
     display: flex;
     -webkit-display: flex;
-    justify-content: space-around;
-    -webkit-justify-content: space-around;
     align-items: center;
     -webkit-align-items: center;
     background-color: #ffffff;
-    width: 88rem;
-    height: 50rem;
     padding: 2.5rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.14), 0 0.25rem 1.25rem 0 rgba(0,0,0,0.12), 0 0.75rem 0.25rem -0.5rem rgba(0,0,0,0.2);
@@ -110,12 +143,10 @@ b {
 
 #listbox {
     width: 36rem;
-    height: 31.25rem;
-    border-top: 0.25rem solid #cccccc;
-    border-bottom: 0.25rem solid #cccccc;
     text-align: left;
     line-height: 6rem;
     opacity: 0;
+    margin: 0;
 }
 
 #Student {
@@ -192,12 +223,16 @@ b {
     top: 11.81rem; /* -15*sin(3*2*pi/5)+3 */
 }
 
+@media screen and (orientation: portrait) and (min-width: 950px) {
+    .modal {
+        width: 85vw;
+    }
+}
+
 #email-icon-span {
     margin: 0 3rem 0 1rem;
 }
 
 #email-icon-in-popup {
-    height: 4rem;
     width: auto;
-    transform: translateY(0.65rem);
 }
