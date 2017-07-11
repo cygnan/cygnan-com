@@ -3,14 +3,14 @@
 /* Portrait-long */
 @media screen and (max-aspect-ratio: 2/3) {
     html {
-        font-size: 1.8vw
+        font-size: 1.67vw
     }
 }
 
 /* Portrait */
 @media screen and (min-aspect-ratio: 2/3) and (orientation: portrait) {
     html {
-        font-size: 1.2vh
+        font-size: 1.11vh
     }
 }
 
@@ -64,7 +64,7 @@
 
     #email-icon-in-popup {
         height: 3rem;
-        transform: translateY(0.5rem);
+        transform: translateY(.5rem);
     }
 }
 
@@ -82,19 +82,20 @@
     }
 
     #listbox {
-        border-top: 0.25rem solid #cccccc;
-        border-bottom: 0.25rem solid #cccccc;
+        border-top: .25rem solid #ccc;
+        border-bottom: .25rem solid #ccc;
         height: 31.25rem;
         padding: 4rem 0 4rem 0;
     }
 
     #email-icon-in-popup {
         height: 4rem;
-        transform: translateY(0.65rem);
+        transform: translateY(.65rem);
     }
 }
 
-html, body {
+html,
+body {
     height: 100%;
 }
 
@@ -105,9 +106,9 @@ body {
     -webkit-justify-content: center;
     align-items: center;
     -webkit-align-items: center;
-    background-color: #eeeeee;
-    color: #444444;
-    font-family: "Roboto", sans-serif;
+    background-color: #eee;
+    color: #444;
+    font-family: 'Roboto', sans-serif;
     font-size: 4rem;
 }
 
@@ -120,10 +121,10 @@ b {
     -webkit-display: flex;
     align-items: center;
     -webkit-align-items: center;
-    background-color: #ffffff;
+    background-color: #fff;
     padding: 2.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0.5rem 0.5rem 0 rgba(0,0,0,0.14), 0 0.25rem 1.25rem 0 rgba(0,0,0,0.12), 0 0.75rem 0.25rem -0.5rem rgba(0,0,0,0.2);
+    border-radius: .5rem;
+    box-shadow: 0 .5rem .5rem 0 rgba(0,0,0,.14), 0 .25rem 1.25rem 0 rgba(0,0,0,.12), 0 .75rem .25rem -.5rem rgba(0,0,0,.2);
 }
 
 #iconsbox {
@@ -156,22 +157,22 @@ b {
 
 .listbox-icons-img {
     margin: 0 2rem 0 2rem;
-    transform: translateY(0.4rem);
+    transform: translateY(.4rem);
     width: 4rem;
     height: 4rem;
 }
 
 #topicon {
     border-radius: 50%;
-    border: #ffffff solid 0.1px; /* For IE11 */
-    background-color: #ffffff;
+    border: #fff solid .1px; /* For IE11 */
+    background-color: #fff;
     height: 15rem;
     width: 15rem;
     padding: 1rem;
     margin: auto;
-    -webkit-animation: zoomIn 0.6s;
-    -moz-animation: zoomIn 0.6s;
-    animation: zoomIn 0.6s;
+    -webkit-animation: zoomIn .6s;
+    -moz-animation: zoomIn .6s;
+    animation: zoomIn .6s;
     z-index: 2;
 }
 

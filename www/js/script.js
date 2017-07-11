@@ -5,8 +5,8 @@
 })();
 
 $(document).ready(function () {
-    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered.
-    $(".modal").modal();
+    // the 'href' attribute of .modal-trigger must specify the modal ID that wants to be triggered.
+    $('.modal').modal();
 })
 
 $(document).ready(function () {
@@ -18,11 +18,11 @@ $(document).ready(function () {
 
     // map関数用の配列
     const E = [
-        "posgithub",
-        "postwitter",
-        "poskeybase",
-        "possoundcloud",
-        "posemail"
+        'posgithub',
+        'postwitter',
+        'poskeybase',
+        'possoundcloud',
+        'posemail'
     ];
 
     // 角速度 [rad/s]
@@ -34,11 +34,11 @@ $(document).ready(function () {
 
     // 初期位相 [rad]
     const PH = {
-        "posgithub": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 0,
-        "postwitter": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 1,
-        "poskeybase": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 2,
-        "possoundcloud": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 3,
-        "posemail": Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
+        'posgithub': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 0,
+        'postwitter': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 1,
+        'poskeybase': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 2,
+        'possoundcloud': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 3,
+        'posemail': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
     }
 
     let t = 0;
@@ -52,7 +52,7 @@ $(document).ready(function () {
                     { opacity: 1 }
                 )
             })
-            $("#listbox").animate(
+            $('#listbox').animate(
                 { opacity: 1 }
             )
             clearInterval(OPENING);
@@ -68,8 +68,8 @@ $(document).ready(function () {
             let idname = '#' + e; /* For IE11 */
             $(idname).css(
                 {
-                    left: x + "rem",
-                    top: y + "rem"
+                    left: x + 'rem',
+                    top: y + 'rem'
                 }
             )
         })
