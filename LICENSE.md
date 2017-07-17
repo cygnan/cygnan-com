@@ -115,7 +115,7 @@ the terms above.
 
 # A keybase icon by Mark Lopez
 
-**Note: [keybase.svg](./www/img/keybase.svg) was modified by me on Sunday, May 28, 2017, at 03:57 am.**
+**Note: [keybase.svg](www/img/keybase.svg) was modified by me on Sunday, May 28, 2017, at 03:57 am.**
 
 ---
 
