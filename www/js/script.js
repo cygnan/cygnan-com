@@ -7,7 +7,7 @@
 $(document).ready(function () {
     // the 'href' attribute of .modal-trigger must specify the modal ID that wants to be triggered.
     $('.modal').modal();
-})
+});
 
 $(document).ready(function () {
     // 描画速度 [frame/s]
@@ -21,7 +21,7 @@ $(document).ready(function () {
         'posgithub',
         'postwitter',
         'poskeybase',
-        'possoundcloud',
+        'posflickr',
         'posemail'
     ];
 
@@ -37,9 +37,9 @@ $(document).ready(function () {
         'posgithub': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 0,
         'postwitter': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 1,
         'poskeybase': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 2,
-        'possoundcloud': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 3,
+        'posflickr': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 3,
         'posemail': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
-    }
+    };
 
     let t = 0;
 
@@ -50,11 +50,11 @@ $(document).ready(function () {
                 let idname = '#' + e; /* For IE11 */
                 $(idname).css(
                     { opacity: 1 }
-                )
-            })
+                );
+            });
             $('#listbox').animate(
                 { opacity: 1 }
-            )
+            );
             clearInterval(OPENING);
         }
     }, INTERVAL);
@@ -71,11 +71,11 @@ $(document).ready(function () {
                     left: x + 'rem',
                     top: y + 'rem'
                 }
-            )
-        })
+            );
+        });
 
         // 次また、(INTERVAL / 1000)[s]（ INTERVAL[ms] ）後に実行されるので
         // (INTERVAL / 1000)[s]だけ t[s] に足しておく。
         t += INTERVAL / 1000;
-    }, INTERVAL)
+    }, INTERVAL);
 });

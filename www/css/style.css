@@ -199,6 +199,14 @@ b {
     height: 7rem;
 }
 
+#flickr-icon-img {
+    position: absolute !important;
+    left: 0.5rem; /* 9/2-8/2 */
+    top: 0.5rem;
+    width: 8rem;
+    height: 8rem;
+}
+
 #posgithub {
     left: 7.64rem; /* 15*cos(4*2*pi/5)+3 */
     top: 17.27rem; /* -15*sin(4*2*pi/5)+3 */
@@ -214,7 +222,7 @@ b {
     top: -11.26rem; /* -15*sin(2*pi/5)+3 */
 }
 
-#possoundcloud {
+#posflickr {
     left: -9.13rem; /* 15*cos(2*2*pi/5)+3 */
     top: -5.81rem; /* -15*sin(2*2*pi/5)+3 */
 }
