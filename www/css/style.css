@@ -201,10 +201,10 @@ b {
 
 #flickr-icon-img {
     position: absolute !important;
-    left: 0.5rem; /* 9/2-8/2 */
-    top: 0.5rem;
-    width: 8rem;
-    height: 8rem;
+    left: 1rem; /* 9/2-7/2 */
+    top: 1rem;
+    width: 7rem;
+    height: 7rem;
 }
 
 #posgithub {
