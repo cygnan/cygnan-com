@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-CERTBOT_HOST = 'http://acme.cygnan.com/cygnan'
+CERTBOT_HOST = 'http://acme.cygnan.com'
 
 import webapp2
 
