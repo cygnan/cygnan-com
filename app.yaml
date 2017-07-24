@@ -11,6 +11,12 @@ automatic_scaling:
   max_pending_latency: automatic
 
 handlers:
+- url: /.well-known/acme-challenge/.*
+  script: certbot.app
+
+#- url: /.*
+#  script: main.app
+
 - url: /
   static_files: www/index.html
   upload: www/index.html
