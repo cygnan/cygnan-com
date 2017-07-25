@@ -25,5 +25,8 @@ Disallow: /
 User-agent: Yahoo-MMCrawler
 Disallow: /
 
+User-agent: Twitterbot
+Allow: /img
+
 User-agent: *
 Disallow: /img
