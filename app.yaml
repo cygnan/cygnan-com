@@ -10,6 +10,15 @@ automatic_scaling:
   min_pending_latency: 3000ms
   max_pending_latency: automatic
 
+skip_files:
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+- ^(.*/)?.*\.md$
+- ^main\.py$
+
 handlers:
 - url: /.well-known/acme-challenge/.*
   script: certbot.app
@@ -18,11 +27,37 @@ handlers:
   static_files: www/index.html
   upload: www/index.html
   secure: always
+  redirect_http_response_code: 301
   http_headers:
-    Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
+    Referrer-Policy: no-referrer
+
+- url: /(.*\.js)$
+  static_files: www/\1
+  upload: www/.*\.js$
+  secure: always
+  redirect_http_response_code: 301
+  mime_type: application/javascript
+  http_headers:
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
+    Referrer-Policy: no-referrer
 
 - url: /
   static_dir: www
   secure: always
+  redirect_http_response_code: 301
   http_headers:
-    Strict-Transport-Security: 'max-age=31536000; includeSubDomains; preload'
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    X-Frame-Options: DENY
+    X-XSS-Protection: 1; mode=block
+    X-Content-Type-Options: nosniff
+    Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
+    Referrer-Policy: no-referrer
