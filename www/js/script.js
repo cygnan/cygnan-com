@@ -1,5 +1,6 @@
 (function () {
-    if (window.location.href.toString().indexOf('cygnan.com') == -1) {
+    let url = window.location.href.toString();
+    if (url.indexOf('cygnan.com') == -1 && url.indexOf('localhost') == -1) {
         window.location.href = 'https://cygnan.com';
     }
 })();
