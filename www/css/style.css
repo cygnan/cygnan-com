@@ -191,15 +191,7 @@ b {
     height: 5rem;
 }
 
-#keybase-icon-img {
-    position: absolute !important;
-    left: 1rem; /* 9/2-7/2 */
-    top: 1rem;
-    width: 7rem;
-    height: 7rem;
-}
-
-#flickr-icon-img {
+#github-icon-img {
     position: absolute !important;
     left: 1.5rem; /* 9/2-6/2 */
     top: 1.5rem;
