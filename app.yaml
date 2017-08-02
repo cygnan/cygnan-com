@@ -17,7 +17,6 @@ skip_files:
 - ^(.*/)?.*/RCS/.*$
 - ^(.*/)?\..*$
 - ^(.*/)?.*\.md$
-- ^main\.py$
 
 handlers:
 - url: /.well-known/acme-challenge/.*
