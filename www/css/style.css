@@ -219,7 +219,7 @@ b {
     top: -5.81rem; /* -15*sin(2*2*pi/5)+3 */
 }
 
-#posemail {
+#posmastodon {
     left: -9.13rem; /* 15*cos(3*2*pi/5)+3 */
     top: 11.81rem; /* -15*sin(3*2*pi/5)+3 */
 }

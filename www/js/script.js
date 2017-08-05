@@ -23,7 +23,7 @@ $(document).ready(function () {
         'postwitter',
         'poskeybase',
         'posflickr',
-        'posemail'
+        'posmastodon'
     ];
 
     // 角速度 [rad/s]
@@ -39,7 +39,7 @@ $(document).ready(function () {
         'postwitter': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 1,
         'poskeybase': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 2,
         'posflickr': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 3,
-        'posemail': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
+        'posmastodon': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
     };
 
     let t = 0;
