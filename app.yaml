@@ -18,6 +18,10 @@ skip_files:
 - ^(.*/)?\..*$
 - ^(.*/)?.*\.md$
 
+error_handlers:
+- error_code: dos_api_denial
+  file: 403.html
+
 handlers:
 - url: /.well-known/acme-challenge/.*
   script: certbot.app
