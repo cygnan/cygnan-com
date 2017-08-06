@@ -34,6 +34,7 @@ handlers:
     X-Content-Type-Options: nosniff
     Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
     Referrer-Policy: no-referrer
+    X-Robots-Tag: noarchive, noimageindex
 
 - url: /(.*\.js)$
   static_files: www/\1
@@ -48,6 +49,7 @@ handlers:
     X-Content-Type-Options: nosniff
     Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
     Referrer-Policy: no-referrer
+    X-Robots-Tag: noarchive, noimageindex
 
 - url: /
   static_dir: www
@@ -60,3 +62,4 @@ handlers:
     X-Content-Type-Options: nosniff
     Content-Security-Policy: default-src 'self'; script-src 'self' https://www.google-analytics.com; img-src 'self' https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'none'; block-all-mixed-content; frame-ancestors 'none'; form-action 'none'
     Referrer-Policy: no-referrer
+    X-Robots-Tag: noarchive, noimageindex
