@@ -1,5 +1,6 @@
 (function () {
     const URL = window.location.href.toString();
+
     if (URL.indexOf('cygnan.com') == -1 && URL.indexOf('localhost') == -1) {
         window.location.href = 'https://cygnan.com';
     }
@@ -49,13 +50,16 @@ $(document).ready(function () {
         if (t == INTERVAL / 1000) {
             E.map(function (e) {
                 let idname = '#' + e; /* For IE11 */
+                
                 $(idname).css(
                     { opacity: 1 }
                 );
             });
+
             $('#listbox').animate(
                 { opacity: 1 }
             );
+
             clearInterval(OPENING);
         }
     }, INTERVAL);
@@ -65,8 +69,11 @@ $(document).ready(function () {
     setInterval(function () {
         E.map(function (e) {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
+
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
+
             let idname = '#' + e; /* For IE11 */
+
             $(idname).css(
                 {
                     left: x + 'rem',
