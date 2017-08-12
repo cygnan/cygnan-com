@@ -42,7 +42,7 @@ handlers:
     Cache-Control: max-age=0
     Expires: Mon, 26 Jul 1997 05:00:00 GMT
 
-- url: /(.*\.js)$
+- url: /(.*\.js$)
   static_files: www/\1
   upload: www/.*\.js$
   secure: always
