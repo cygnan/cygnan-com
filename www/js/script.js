@@ -6,12 +6,12 @@
     }
 })();
 
-$(document).ready(function () {
+$(document).ready(() => {
     // the 'href' attribute of .modal-trigger must specify the modal ID that wants to be triggered.
     $('.modal').modal();
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
     // 描画速度 [frame/s]
     const FPS = 5;
 
@@ -46,9 +46,9 @@ $(document).ready(function () {
     let t = 0;
 
     // 2フレーム目でopacityを1にする
-    const OPENING = setInterval(function () {
+    const OPENING = setInterval(() => {
         if (t == INTERVAL / 1000) {
-            E.map(function (e) {
+            E.map(e => {
                 let idname = '#' + e; /* For IE11 */
                 
                 $(idname).css(
@@ -66,8 +66,8 @@ $(document).ready(function () {
 
     OPENING;
 
-    setInterval(function () {
-        E.map(function (e) {
+    setInterval(() => {
+        E.map(e => {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
 
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
