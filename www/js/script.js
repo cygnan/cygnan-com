@@ -74,12 +74,10 @@ $(document).ready(() => {
 
             let idname = '#' + e; /* For IE11 */
 
-            $(idname).css(
-                {
-                    left: x + 'rem',
-                    top: y + 'rem'
-                }
-            );
+            $(idname).css({
+                left: x + 'rem',
+                top: y + 'rem'
+            });
         });
 
         // 次また、(INTERVAL / 1000)[s]（ INTERVAL[ms] ）後に実行されるので
