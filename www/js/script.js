@@ -1,4 +1,4 @@
-(function () {
+(() => {
     const URL = window.location.href.toString();
 
     if (URL.indexOf('cygnan.com') == -1 && URL.indexOf('localhost') == -1) {
