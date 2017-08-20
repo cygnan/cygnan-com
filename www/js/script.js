@@ -1,4 +1,4 @@
-(() => {
+(function () {
     const URL = window.location.href.toString();
 
     if (URL.indexOf('cygnan.com') == -1 && URL.indexOf('localhost') == -1) {
@@ -6,12 +6,12 @@
     }
 })();
 
-$(document).ready(() => {
+$(document).ready(function () {
     // the 'href' attribute of .modal-trigger must specify the modal ID that wants to be triggered.
     $('.modal').modal();
 });
 
-$(document).ready(() => {
+$(document).ready(function () {
     // 描画速度 [frame/s]
     const FPS = 5;
 
@@ -46,9 +46,9 @@ $(document).ready(() => {
     let t = 0;
 
     // 2フレーム目でopacityを1にする
-    const OPENING = setInterval(() => {
+    const OPENING = setInterval(function () {
         if (t == INTERVAL / 1000) {
-            E.map(e => {
+            E.map(function (e) {
                 let idname = '#' + e; /* For IE11 */
                 
                 $(idname).css(
@@ -66,8 +66,8 @@ $(document).ready(() => {
 
     OPENING;
 
-    setInterval(() => {
-        E.map(e => {
+    setInterval(function () {
+        E.map(function (e) {
             let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
 
             let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
