@@ -11,7 +11,7 @@ $(document).ready(function () {
     $('.modal').modal();
 });
 
-$(document).ready(function () {
+$(window).on("load", function () {
     // 描画速度 [frame/s]
     const FPS = 5;
 
@@ -43,28 +43,57 @@ $(document).ready(function () {
         'posmastodon': Math.floor((2 * Math.PI / 5) * 1000) / 1000 * 4
     };
 
-    let t = 0;
+    // ボタンアニメーションの描画速度 [frame/s]
+    const FADE_IN_FPS = 10;
 
-    // 2フレーム目でopacityを1にする
+    // FADE_IN_FPS（ボタンアニメーションの描画速度）から計算されるボタンアニメーションのインターバル（周期） [ms]
+    const FADE_IN_INTERVAL = 1000 / FADE_IN_FPS;
+
+    // 何フレーム目でボタンのopacityを1にするか
+    const BUTTON_FADE_IN_FRAME_TIMES_DELAY = 4;
+
+    // 何フレーム目でlistboxのopacityを1にするか
+    const LIST_BOX_FADE_IN_FRAME_TIMES_DELAY = 3;
+
+    $('.animate').css(
+        { 'display': 'block' }
+    );
+
+    let fade_in_frame_times = 1;
+
     const OPENING = setInterval(function () {
-        if (t == INTERVAL / 1000) {
-            E.map(function (e) {
-                let idname = '#' + e; /* For IE11 */
-                
-                $(idname).css(
-                    { opacity: 1 }
+        if (fade_in_frame_times == LIST_BOX_FADE_IN_FRAME_TIMES_DELAY) {
+            $('#listbox').animate(
+                { 'opacity': 1 }
+            );
+        }
+
+        if (fade_in_frame_times == BUTTON_FADE_IN_FRAME_TIMES_DELAY) {
+            ['#posemail', '.background-circle'].map(function (e) {
+                $(e).css(
+                    { 'opacity': 1 }
                 );
             });
+        }
 
-            $('#listbox').animate(
-                { opacity: 1 }
+        if (fade_in_frame_times >= BUTTON_FADE_IN_FRAME_TIMES_DELAY) {
+            let e = '#' + E[fade_in_frame_times - BUTTON_FADE_IN_FRAME_TIMES_DELAY];
+
+            $(e).css(
+                { 'opacity': 1 }
             );
+        }
 
+        if (fade_in_frame_times == Math.max(BUTTON_FADE_IN_FRAME_TIMES_DELAY + 4, LIST_BOX_FADE_IN_FRAME_TIMES_DELAY)) {
             clearInterval(OPENING);
         }
-    }, INTERVAL);
+
+        fade_in_frame_times++;
+    }, FADE_IN_INTERVAL);
 
     OPENING;
+
+    let t = 0;
 
     setInterval(function () {
         E.map(function (e) {
@@ -75,8 +104,8 @@ $(document).ready(function () {
             let idname = '#' + e; /* For IE11 */
 
             $(idname).css({
-                left: x + 'rem',
-                top: y + 'rem'
+                'left': x + 'rem',
+                'top': y + 'rem'
             });
         });
 

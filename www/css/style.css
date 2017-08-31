@@ -44,6 +44,10 @@
 
 /* Portrait-long & Portrait */
 @media screen and (orientation: portrait) {
+    body {
+        font-size: 4rem;
+    }
+
     #box {
         flex-direction: column;
         -webkit-flex-direction: column;
@@ -56,6 +60,22 @@
     #listbox {
         height: 25rem;
         padding: 1rem 0 0 0;
+        text-align: left;
+        line-height: 6rem;
+        opacity: 0;
+        margin: 0;
+    }
+
+    #Student {
+        margin: -1rem 0 0 8rem;
+        /* 8[rem] = 2 + 4 + 2 */
+    }
+
+    .listbox-icons-img {
+        margin: 0 2rem 0 2rem;
+        transform: translateY(.4rem);
+        width: 4rem;
+        height: 4rem;
     }
 
     #email-popup {
@@ -66,31 +86,119 @@
         height: 3rem;
         transform: translateY(.5rem);
     }
+
+    .landscape-only {
+        display: none !important;
+    }
 }
 
 /* Landscape & Landscape-long */
 @media screen and (orientation: landscape) {
     body {
+        font-size: 2.67rem;
         font-weight: 100;
     }
 
     #box {
-        width: 88rem;
-        height: 50rem;
-        justify-content: space-around;
-        -webkit-justify-content: space-around;
+        width: 84rem;
+        height: 54rem;
+        flex-direction: row-reverse;
+        -webkit-flex-direction: row-reverse;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+
+    #list-and-topicon-box {
+        width: 30rem;
+        padding-right: 0.5rem;
+        transform: translateY(-1.5rem);
+        display: flex;
+        -webkit-display: flex;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+    }
+
+    #topicon-landscape-div {
+        padding-bottom: 1rem;
+    }
+
+    #topicon-landscape-img {
+        border-radius: 50%;
+        border: #fff solid .1px; /* For IE11 */
+        background-color: #fff;
+        height: 25rem;
+        width: 25rem;
+        padding: 1.67rem;
+        margin: auto;
     }
 
     #listbox {
-        border-top: .25rem solid #ccc;
-        border-bottom: .25rem solid #ccc;
-        height: 31.25rem;
-        padding: 4rem 0 4rem 0;
+        text-align: left;
+        line-height: 4.25rem;
+        opacity: 0;
+        margin: 0;
+    }
+
+    #Student {
+        margin: -.67rem 0 0 5.33rem;
+        /* 5.33[rem] = (2 + 4 + 2) * (2 / 3) */
+    }
+
+    .listbox-icons-img {
+        margin: 0 1.33rem 0 1.33rem;
+        transform: translateY(.27rem);
+        width: 2.67rem;
+        height: 2.67rem;
     }
 
     #email-icon-in-popup {
         height: 4rem;
         transform: translateY(.65rem);
+    }
+
+    .portrait-only {
+        display: none !important;
+    }
+
+    #iconsbox {
+        transform: translateY(1.25rem);
+    }
+
+    #posemail {
+        left: 3rem; /* 0+3 */
+        top: 3rem; /* -0+3 */
+    }
+
+    .background-circle {
+        position: absolute;
+        border-radius: 50%;
+        opacity: 0;
+    }
+
+    #background-circle-1 {
+        width: 13.5rem;
+        height: 13.5rem;
+        left: .75rem; /* 15 / 2 - 13.5 / 2 */
+        top: .75rem;
+        background-color: #e8f3e1;
+        z-index: 2;
+    }
+
+    #background-circle-2 {
+        width: 18rem;
+        height: 18rem;
+        left: -1.5rem;/* 15 / 2 - 18 / 2 */
+        top: -1.5rem;
+        background-color: #f6fbf3;
+        z-index: 1;
+    }
+
+    #email-popup {
+        font-size: 4rem;
     }
 }
 
@@ -109,11 +217,17 @@ body {
     background-color: #eee;
     color: #444;
     font-family: 'Roboto', sans-serif;
-    font-size: 4rem;
 }
 
 b {
     font-weight: 700;
+}
+
+.animate {
+    display: none;
+    -webkit-animation: zoomIn .6s;
+    -moz-animation: zoomIn .6s;
+    animation: zoomIn .6s;
 }
 
 #box {
@@ -142,26 +256,6 @@ b {
     height: 15rem;
 }
 
-#listbox {
-    width: 36rem;
-    text-align: left;
-    line-height: 6rem;
-    opacity: 0;
-    margin: 0;
-}
-
-#Student {
-    margin: -1rem 0 0 8rem;
-    /* 8[rem] = 2 + 4 + 2 */
-}
-
-.listbox-icons-img {
-    margin: 0 2rem 0 2rem;
-    transform: translateY(.4rem);
-    width: 4rem;
-    height: 4rem;
-}
-
 #topicon {
     border-radius: 50%;
     border: #fff solid .1px; /* For IE11 */
@@ -170,16 +264,16 @@ b {
     width: 15rem;
     padding: 1rem;
     margin: auto;
-    -webkit-animation: zoomIn .6s;
-    -moz-animation: zoomIn .6s;
-    animation: zoomIn .6s;
-    z-index: 2;
 }
 
 .btn-icons-a {
     width: 9rem !important;
     height: 9rem !important;
     position: absolute;
+    z-index: 3;
+}
+
+.btn-icons-a-fade-in {
     opacity: 0;
 }
 
