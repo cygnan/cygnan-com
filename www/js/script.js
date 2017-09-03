@@ -59,7 +59,7 @@ $(window).on("load", function () {
         { 'display': 'block' }
     );
 
-    let fade_in_frame_times = 1;
+    var fade_in_frame_times = 1;
 
     const OPENING = setInterval(function () {
         if (fade_in_frame_times == LIST_BOX_FADE_IN_FRAME_TIMES_DELAY) {
@@ -77,7 +77,7 @@ $(window).on("load", function () {
         }
 
         if (fade_in_frame_times >= BUTTON_FADE_IN_FRAME_TIMES_DELAY) {
-            let e = '#' + E[fade_in_frame_times - BUTTON_FADE_IN_FRAME_TIMES_DELAY];
+            var e = '#' + E[fade_in_frame_times - BUTTON_FADE_IN_FRAME_TIMES_DELAY];
 
             $(e).css(
                 { 'opacity': 1 }
@@ -93,15 +93,15 @@ $(window).on("load", function () {
 
     OPENING;
 
-    let t = 0;
+    var t = 0;
 
     setInterval(function () {
         E.map(function (e) {
-            let x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
+            var x = Math.floor(Math.cos(W * t + PH[e]) * 1000) / 1000 * RADIUS + CENTER_X;
 
-            let y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
+            var y = Math.floor(Math.sin(W * t + PH[e]) * 1000) / 1000 * RADIUS * (-1) + CENTER_Y;
 
-            let idname = '#' + e; /* For IE11 */
+            var idname = '#' + e; /* For IE11 */
 
             $(idname).css({
                 'left': x + 'rem',
