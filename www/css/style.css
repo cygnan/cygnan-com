@@ -78,6 +78,16 @@
         height: 4rem;
     }
 
+    #topicon {
+        border-radius: 50%;
+        border: #fff solid .1px; /* For IE11 */
+        background-color: #fff;
+        height: 15rem;
+        width: 15rem;
+        padding: 1rem;
+        margin: auto;
+    }
+
     #email-popup {
         font-size: 3rem;
     }
@@ -248,22 +258,12 @@ b {
     border-radius: 50%;
 }
 
-#pos-topicon {
+#pos-iconsbox-center {
     left: 12rem; /* 39/2-15/2 */
     top: 12rem; /* 39/2-15/2 */
     position: relative;
     width: 15rem;
     height: 15rem;
-}
-
-#topicon {
-    border-radius: 50%;
-    border: #fff solid .1px; /* For IE11 */
-    background-color: #fff;
-    height: 15rem;
-    width: 15rem;
-    padding: 1rem;
-    margin: auto;
 }
 
 .btn-icons-a {
