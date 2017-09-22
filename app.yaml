@@ -23,9 +23,6 @@ error_handlers:
   file: 403.html
 
 handlers:
-- url: /.well-known/acme-challenge/.*
-  script: certbot.app
-
 - url: /
   static_files: www/index.html
   upload: www/index.html
