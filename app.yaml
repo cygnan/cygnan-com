@@ -24,8 +24,8 @@ error_handlers:
 
 handlers:
 - url: /
-  static_files: www/index.html
-  upload: www/index.html
+  static_files: root/index.html
+  upload: root/index.html
   secure: always
   redirect_http_response_code: 301
   http_headers:
@@ -40,8 +40,8 @@ handlers:
     Expires: Mon, 26 Jul 1997 05:00:00 GMT
 
 - url: /(.*\.js$)
-  static_files: www/\1
-  upload: www/.*\.js$
+  static_files: root/\1
+  upload: root/.*\.js$
   secure: always
   redirect_http_response_code: 301
   mime_type: application/javascript
@@ -56,7 +56,7 @@ handlers:
     Cache-Control: public, max-age=86400, immutable
 
 - url: /
-  static_dir: www
+  static_dir: root
   secure: always
   redirect_http_response_code: 301
   http_headers:
