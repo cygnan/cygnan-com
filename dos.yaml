@@ -5,13 +5,15 @@ blacklist:
   description: an IPv4 subnet 2
 - subnet: 78.108.176.0/20
   description: an IPv4 subnet 3
-- subnet: 139.162.192.0/19
+- subnet: 94.242.0.0/18
   description: an IPv4 subnet 4
-- subnet: 146.0.72.0/24
+- subnet: 139.162.192.0/19
   description: an IPv4 subnet 5
-- subnet: 146.0.75.0/24
+- subnet: 146.0.72.0/24
   description: an IPv4 subnet 6
-- subnet: 151.236.216.0/21
+- subnet: 146.0.75.0/24
   description: an IPv4 subnet 7
-- subnet: 178.62.128.0/17
+- subnet: 151.236.216.0/21
   description: an IPv4 subnet 8
+- subnet: 178.62.128.0/17
+  description: an IPv4 subnet 9
